@@ -1,0 +1,229 @@
+// TESTIMONIAL
+.testimonialsRight{
+  overflow: hidden;
+  .line{
+    width: 60px;
+    height: 2px;
+    text-align: left;
+    margin: 20px 0;
+    background: #87AD86;
+  }
+  .container{
+    display: flex;
+    color: #FFFFFF;
+    @media (max-width: $table) {
+      flex-direction: column;
+    }
+  }
+
+  .testimonialsRightText{
+    padding-right: 3.125rem;
+    min-width: 49.1228070175%;
+    .btn{
+      margin-top: 45px;
+      background: #577E56;
+      border: unset;
+    }
+    .text{
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 150%;
+      letter-spacing: -0.005em;
+      color: #5C5D64;
+    }
+  }
+  &Wrap{
+    //width: 50.8771929825%;
+    width: 100%;
+    margin-right: $halfcontainerminus;
+    position: relative;
+    .slickNumberSlide{
+      font-weight: 500;
+      @include toRem(font-size,16);
+      @include toRem(line-height,20);
+      @include toRem(left,77);
+      @include toRem(bottom,28);
+      color: #39464F;
+      position: absolute;
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none;
+      @media (max-width: 768px ){
+        left: calc(50% - 22px);
+        @include toRem(bottom,24);
+        bottom: 1rem;
+      }
+    }
+    .slickNumberSlide{
+
+    }
+    @media (max-width: $maxcontainer) {
+      margin-right: 0;
+    }
+    @media (max-width: $table) {
+      margin-top: 30px;
+      @include toRem(padding-bottom,74);
+    }
+    &Block{
+      @media (max-width: $table) {
+        @include toRem(padding-bottom,20);
+      }
+      &Item{
+        margin: 0 0.938rem;
+        background: #ffffff;
+        position: relative;
+        padding: 2.5rem 2rem;
+        @include toRem(width,450);
+        @media (max-width: $table) {
+          margin: 0 0.625rem 0 0;
+          padding: 2.188rem 1.563rem;
+        }
+        .stars{
+          display: flex;
+          margin-bottom: 20px;
+          img{
+            margin-right: 3px;
+          }
+        }
+        &Img{
+          position: absolute;
+          @include toRem(left,45);
+          @include toRem(top,-41);
+          border-radius: 50%;
+          overflow: hidden;
+          border: 1.5px solid #F1F2F5;
+          @include toRem(width,82);
+          @include toRem(height,82);
+          @media (max-width: $table) {
+            @include toRem(left,40);
+          }
+          img{
+            @extend %absolute;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+        }
+        &Text{
+          color: #5C5D64;
+          letter-spacing: -0.005em;
+          @include toRem(margin-bottom,35);
+        }
+
+        &Name{
+          //@include toRem(padding-top,25);
+          @include toRem(font-size,20);
+          @include toRem(line-height,24);
+          letter-spacing: -0.02em;
+          //border-top: 1px solid #F2F2F2;
+
+          //padding-top: 35px;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 16px;
+          color: #222223;
+        }
+        &Position{
+          @include toRem(font-size,12);
+          @include toRem(margin-top,8);
+          line-height: 86%;
+          font-weight: 500;
+          line-height: 12px;
+          color: #9A9B9C;
+        }
+      }
+    }
+  }
+  .title2{
+    //font-family: 'Raleway';
+    font-weight: 700;
+    @include toRem(font-size,48);
+    line-height: 125%;
+    letter-spacing: -0.015em;
+    text-transform: uppercase;
+    color: #1E1E24;
+    @media (max-width: $table) {
+      @include toRem(font-size,24);
+    }
+  }
+  .subtitle{
+    @media (max-width: $table) {
+      @include toRem(margin-bottom,5);
+    }
+  }
+  .title2, .subtitle{
+    @media (max-width: $table) {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+  }
+  .slick-arrow{
+    @include toRem(width,61);
+    @include toRem(height,61);
+    background: #FFFFFF;
+    box-shadow: 0px 25px 40px rgba(59, 80, 90, 0.05);
+    border-radius: 50%;
+    @extend %flex-center;
+    justify-content: center;
+    font-size: 0px;
+    @include toRem(top,-100);
+    left: auto;
+    right: $halfcontainer;
+    @extend %transition25;
+
+
+
+
+    &:focus{
+      outline: none;
+    }
+    &:hover{
+      background: #F1F2F5;
+    }
+    &.slick-next{
+      transform: translate(50px, 0px);
+      @include toRem(bottom,-80);
+      top: unset;
+      @media (max-width: $table) {
+        transform: translate(35px, 0px);
+        left: calc(50% - -15px);
+      }
+      &::before{
+        content: url("img/arrow-right.svg");
+      }
+    }
+    &.slick-prev{
+      transform: translate(-91px, 0px);
+      @include toRem(bottom,-80);
+      top: unset;
+      @media (max-width: $table) {
+        transform: translate(-35px, 0px);
+        left: calc(50% - 75px);
+      }
+      &::before{
+        content: url("img/arrow-left.svg");
+      }
+    }
+    bottom: unset;
+    @include toRem(left,90);
+    @include toRem(bottom,-80);
+    @media (max-width: $table) {
+      top: auto;
+      bottom: 0;
+      right: calc(50% - 20px);
+    }
+    @media (max-width:$maxcontainer){
+      @include toRem(right,150);
+    }
+  }
+  .container{
+    @media (max-width: $maxcontainer) {
+      padding-right: 0;
+    }
+  }
+  .slick-list{
+    @media (max-width: $tablemin){
+      padding-left: 0!important;
+    }
+  }
+
+}

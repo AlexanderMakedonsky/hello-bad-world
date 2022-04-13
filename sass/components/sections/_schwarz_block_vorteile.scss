@@ -1,0 +1,118 @@
+// ADVANTAGES
+.blackAdvantages{
+  padding: 150px 0;
+  &Subtitle{
+    color: #87AD86;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    @media (max-width: $table){
+      font-size: 12px;
+    }
+  }
+  &Line{
+    width: 60px;
+    height: 2px;
+    text-align: center;
+    margin: 20px auto;
+    background: #87AD86;
+  }
+  &Title{
+    font-style: normal;
+    font-weight: 700;
+    @include toRem(font-size,48);
+    @include toRem(line-height,60);
+    text-align: center;
+    letter-spacing: -0.015em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    @media (max-width: $table){
+      font-size: 24px;
+      letter-spacing: -0.015em;
+      line-height: 125%;
+    }
+  }
+  &Text{
+    @include toRem(font-size,18);
+    @include toRem(line-height,27);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: -0.005em;
+    @include toRem(margin-bottom,70);
+    max-width: 442px;
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: $table){
+      font-size: 14px;
+      @include toRem(font-size,14);
+    }
+  }
+  &Block{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 4.375rem 4.375rem 3.813rem 4.375rem;
+    @include toRem(grid-gap,55);
+    @media (max-width: 71.875rem){
+      @include toRem(padding,30);
+      @include toRem(grid-gap,20);
+    }
+    @media (max-width: $table){
+      padding: 0;
+      grid-template-columns: 100%;
+      @include toRem(grid-gap,40);
+      border: 0px;
+    }
+    &Item{
+      position: relative;
+      display: grid;
+      background: #292C36;
+      padding: 76px 37px 40px;
+      //grid-template-columns: 4.438rem auto;
+      @media (max-width: 71.875rem){
+        //grid-template-columns: 3.75rem auto;
+        margin-bottom: 35px;
+      }
+
+      &Img{
+        position: absolute;
+        top: -25px;
+        left: 37px;
+        width: 4.438rem;
+        height: 4.438rem;
+        @extend %flex-center;
+        justify-content: center;
+        padding: 0.938rem;
+        @media (max-width: 71.875rem){
+          width: 3.75rem;
+          height: 3.75rem;
+          padding: 0.75rem;
+        }
+      }
+      &Content{
+        @media (max-width: 71.875rem){
+          padding-left: 1.25rem;
+        }
+        &Title{
+          @include toRem(font-size,20);
+          @include toRem(line-height,24);
+          @include toRem(margin-bottom,8);
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 145%;
+          letter-spacing: -0.005em;
+          color: #fff;
+        }
+        &Text{
+          letter-spacing: -0.005em;
+        }
+      }
+    }
+  }
+}
